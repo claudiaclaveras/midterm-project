@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+	<title>Craigslist</title>
+	<link rel="stylesheet" href="assets/css/stylesearch.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="search.html">SEARCH</a></li>
+				<li><a href="details.html">DETAILS</a></li>
+			</ul>
+		</nav>
+	</header>
+    <h1>Search</h1>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+<h2>Housing</h2>
+<ul id="myUL">
+  <li><a href="#">apts/housing</a></li>
+  <li><a href="#">housing swap</a></li>
+  <li><a href="#">housing wanted</a></li>
+  <li><a href="#">office/commerical</a></li>
+  <li><a href="#">parking/storage</a></li>
+  <li><a href="#">rel estate for sale</a></li>
+  <li><a href="#">rooms/shared</a></li>
+  <li><a href="#">rooms wanted</a></li>
+  <li><a href="#">sublets/temporary</a></li>
+  <li><a href="#">vacation rental</a></li>
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+    
+<footer>
+		<p>&copy; 2019. All rights reserved. </p>
+</footer>
+    
+
+</body>
+</html>
+
